@@ -1,7 +1,7 @@
 # submit-jobs usage
 Periodically check queueing system and submit jobs so that N jobs always in your queue
 
-## In user defined commands the following variables need to be defined:
+## The following variables need to be defined:
 
 #### 1. check_queue & search_queue
 
@@ -20,7 +20,6 @@ E.g.
 E.g.
 
     sub_command=qsub
-  
     sub_command=sbatch
 
 #### 3. filname

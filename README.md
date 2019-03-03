@@ -1,13 +1,9 @@
-# submit-jobs
+# submit-jobs usage
 Periodically check queueing system and submit jobs so that N jobs always in your queue
 
-# Usage
+## In user defined commands the following variables need to be defined:
 
-
-## In USER DEFINED COMMANDS please define:
-
-
-#### check_queue & search_queue:
+#### 1. check_queue & search_queue
 
 "$check_queue | grep $search_queue" must return the subset of the
 queue that you want want to count and only that. Please check on
@@ -19,14 +15,14 @@ E.g.
   search_queue=zls565
   search_queue=express
 
-#### sub_command:
+#### 2. sub_command
 
 E.g.
 
   sub_command=qsub
   sub_command=sbatch
 
-#### filname:
+#### 3. filname
 
 Additionally, $filename must contain a list of path-to-jobs/job
 to be submitted, one job per line, with either an absolute path
@@ -35,14 +31,14 @@ script is run from. This can be created by:
 
   find . -name "*job" >> <filename>
 
-#### num_jobs:
+#### 4. num_jobs
 
 The number of jobs to have in a queue at a time; an integer.
 E.g.
 
   num_jobs=21
 
-#### every:
+#### 5. every
 
 How often to check the queue.
 E.g.
@@ -53,7 +49,7 @@ E.g.
   every=12s
 
 
-## To run this script in the background:
+## To run this script in the background
 
 
 There are other ways to detach a process from your current session
